@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOSHWAY Innovation · Creative</title>
+<link rel="icon" type="image/png" href="../assets/favicon.png?v=2">
+<script src="../guard.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="JOSHWAY home"><img src="../assets/joshway-logo.png" alt="JOSHWAY"></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Toggle menu</span></button>
+  <nav id="site-navigation" class="site-nav" aria-label="Main navigation">
+    <a href="#about">About</a><a href="#programs">Programs</a><a href="#opportunities">Opportunities</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown__trigger is-active" type="button" aria-expanded="false" aria-haspopup="true">Innovation <svg aria-hidden="true" viewBox="0 0 12 8"><path d="m1 1 5 5 5-5"/></svg></button>
+      <div class="nav-dropdown__menu">
+        <a class="is-current" href="index.html"><span>Welcome</span><small>Meet the book project</small></a>
+        <a href="about-the-book-series/index.html"><span>About the Book Series</span><small>Story and purpose</small></a>
+        <a href="community-impact/index.html"><span>Community Impact</span><small>Voices and outcomes</small></a>
+      </div>
+    </div>
+    <a href="#arcade">Arcade</a><a href="#shop">Shop</a>
+    <a class="nav-donate" href="#support">Donate</a>
+  </nav>
+</header>
+<main class="cosmic-landing" id="top">
+      <section class="space-flight">
+        <div class="space-flight__backdrop" aria-hidden="true">
+          <div class="story-sun">
+            <span></span>
+          </div>
+          <div class="story-horizon story-horizon--one"></div>
+          <div class="story-horizon story-horizon--two"></div>
+          <div class="space-earth">
+            <span class="space-earth__land space-earth__land--one"></span>
+            <span class="space-earth__land space-earth__land--two"></span>
+            <span class="space-earth__cloud"></span>
+          </div>
+        </div>
+
+        <div
+          class="astronaut-josh"
+          aria-hidden="false"
+          data-selected-josh-weave
+        >
+          <style>
+            [data-selected-josh-weave] {
+              --josh-right-edge: 12vw;
+              --josh-left-edge: calc(100vw - clamp(15rem, 27vw, 27rem) - 4vw);
+              --josh-center: 36vw;
+              --josh-stop-y: 24vh;
+              animation: selected-josh-weave linear both;
+              animation-timeline: scroll(root block);
+              animation-range: 0% 72%;
+              transform: translate3d(0, var(--flight-y), 0)
+                rotate(var(--flight-rotate)) scale(var(--flight-scale));
+            }
+
+            @keyframes selected-josh-weave {
+              0%, 20% {
+                right: var(--josh-right-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              48%, 58% {
+                right: var(--josh-left-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              76% {
+                right: var(--josh-right-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              84%, 100% {
+                right: var(--josh-center);
+                z-index: 0;
+                transform: translate3d(0, var(--josh-stop-y), 0)
+                  rotate(0deg) scale(0.75);
+              }
+            }
+
+            @media (max-width: 600px) {
+              [data-selected-josh-weave] {
+                --josh-right-edge: -1.5rem;
+                --josh-left-edge: calc(100vw - 14rem);
+                --josh-center: calc(50vw - 6.5rem);
+                --josh-stop-y: 8vh;
+              }
+            }
+          </style>
+          <svg
+      class="astronaut-josh__svg"
+      viewBox="0 0 420 560"
+      role="img"
+      aria-label="Josh flying in his blue superhero outfit and orange cape"
+    >
+      <path
+        class="astronaut-josh__cape"
+        d="M178 279C93 294 47 369 36 490c62-45 123-57 181-38l41-126-80-47Z"
+      />
+      <path
+        class="astronaut-josh__cape-fold"
+        d="M176 306c-54 41-86 92-103 153M198 337c-43 34-69 72-82 113"
+      />
+      <path
+        class="astronaut-josh__leg"
+        d="M188 410c-14 41-22 83-21 126h65l30-117-74-9Z"
+      />
+      <path
+        class="astronaut-josh__leg"
+        d="M255 412c9 42 27 80 52 115l55-37-40-94-67 16Z"
+      />
+      <path
+        class="astronaut-josh__boot"
+        d="M165 514h70v35c-12 8-58 7-73 0l3-35Z"
+      />
+      <path
+        class="astronaut-josh__boot"
+        d="m302 501 54-36 22 31c-5 13-42 38-59 36l-17-31Z"
+      />
+      <path
+        class="astronaut-josh__body"
+        d="M171 270c37-24 102-25 140 2 16 42 21 92 10 149-45 27-103 29-151 3-14-57-14-108 1-154Z"
+      />
+      <path
+        class="astronaut-josh__arm"
+        d="M294 285c38-35 70-75 95-119 17 4 26 13 27 29-18 61-48 110-90 147l-32-57Z"
+      />
+      <path
+        class="astronaut-josh__suit-stripe"
+        d="M340 242c13 9 24 20 31 33M350 226c14 9 25 19 33 31"
+      />
+      <path
+        class="astronaut-josh__hand"
+        d="M383 176c3-24 15-39 34-49 4 17 2 31-7 42 14-8 26-8 36 0-11 22-28 34-50 35l-13-28Z"
+      />
+      <path
+        class="astronaut-josh__arm"
+        d="M179 289c-43 3-83-8-121-34-13 9-18 21-13 35 38 41 83 62 135 61l-1-62Z"
+      />
+      <path
+        class="astronaut-josh__suit-stripe"
+        d="M105 327c5-15 12-29 22-40M87 320c5-16 13-30 23-42"
+      />
+      <path
+        class="astronaut-josh__hand"
+        d="M67 260c-15-16-32-21-50-15 8 14 19 23 32 27-15 0-26 5-33 16 17 16 36 20 57 11l-6-39Z"
+      />
+      <circle class="astronaut-josh__bun" cx="202" cy="78" r="34" />
+      <circle class="astronaut-josh__bun" cx="239" cy="61" r="38" />
+      <circle class="astronaut-josh__bun" cx="279" cy="79" r="34" />
+      <ellipse
+        class="astronaut-josh__face"
+        cx="236"
+        cy="190"
+        rx="78"
+        ry="84"
+      />
+      <circle class="astronaut-josh__ear" cx="161" cy="194" r="15" />
+      <circle class="astronaut-josh__ear" cx="311" cy="194" r="15" />
+      <path
+        class="astronaut-josh__hair"
+        d="M166 169c4-58 32-83 73-83 46 0 76 31 79 84-35-26-76-33-152-1Z"
+      />
+      <path
+        class="astronaut-josh__mask"
+        d="M164 174c49-23 99-22 148 1l-13 47c-39 18-80 18-121-1l-14-47Z"
+      />
+      <ellipse
+        class="astronaut-josh__eye"
+        cx="199"
+        cy="190"
+        rx="9"
+        ry="13"
+      />
+      <ellipse
+        class="astronaut-josh__eye"
+        cx="272"
+        cy="190"
+        rx="9"
+        ry="13"
+      />
+      <path class="astronaut-josh__smile" d="M211 234c17 14 34 14 51 0" />
+      <path
+        class="astronaut-josh__scarf"
+        d="M188 258c30 20 62 21 94 1l16 24c-38 26-82 26-124-1l14-24Z"
+      />
+      <path
+        class="astronaut-josh__scarf-tail"
+        d="M282 275c20 8 35 23 46 45l-35 6-17-39 6-12Z"
+      />
+      <ellipse
+        class="astronaut-josh__badge"
+        cx="245"
+        cy="337"
+        rx="67"
+        ry="43"
+      />
+      <path
+        class="astronaut-josh__badge-path"
+        d="M194 346c31-31 67-35 103-10"
+      />
+      <path
+        class="astronaut-josh__badge-star"
+        d="M257 312c-2 23-6 38-17 43-10 5-20 0-25-9M248 313h20"
+      />
+    </svg>
+          <span class="astronaut-josh__callout">Keep going</span>
+        </div>
+
+        <section class="space-scene space-scene--launch">
+          <div class="space-scene__copy">
+            <div class="space-eyebrow">
+              <span>JOSHWAY BOOK PROJECT</span> MISSION 01
+            </div>
+            <h1>
+              Courage is a <em>journey.</em>
+            </h1>
+            <p>
+              Meet Josh—a young hero discovering that the biggest journeys begin
+              when we face what we feel, reach for help, and choose to rise.
+            </p>
+            <div class="space-scene__actions">
+              <a
+                class="space-button space-button--coral"
+                href="about-the-book-series/index.html"
+              >
+                Explore the book <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 10h11M11 5l5 5-5 5" />
+    </svg>
+              </a>
+              <a class="space-scroll-cue" href="#begin-descent">
+                Scroll to begin descent <span>↓</span>
+              </a>
+            </div>
+          </div>
+          <div class="space-scene__mission-tag" aria-hidden="true">
+            <span>DESTINATION</span>
+            <strong>THE WAY FORWARD</strong>
+          </div>
+        </section>
+
+        <section class="space-scene space-scene--feel" id="begin-descent">
+          <article class="orbit-card orbit-card--left">
+            <span>STEP 01</span>
+            <h2>Name the feeling.</h2>
+            <p>
+              Fear, frustration, and uncertainty can feel enormous. Courage
+              starts by saying what is happening inside.
+            </p>
+            <div class="orbit-card__signal" aria-hidden="true">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </article>
+        </section>
+
+        <section class="space-scene space-scene--help">
+          <article class="orbit-card orbit-card--right">
+            <span>STEP 02</span>
+            <h2>Ask for help.</h2>
+            <p>
+              Even superheroes need a team. Reaching toward a coach, parent,
+              teacher, or friend is strength in action.
+            </p>
+            <blockquote>“I don’t have to carry this alone.”</blockquote>
+          </article>
+        </section>
+
+        <section class="space-scene space-scene--rise">
+          <style>
+            @keyframes selected-josh-weave {
+              0%, 20% {
+                right: var(--josh-right-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              28%, 36% {
+                right: var(--josh-left-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              44%, 76% {
+                right: var(--josh-right-edge);
+                z-index: 8;
+                transform: translate3d(0, var(--flight-y), 0)
+                  rotate(var(--flight-rotate)) scale(var(--flight-scale));
+              }
+              84%, 100% {
+                right: var(--josh-center);
+                z-index: 0;
+                transform: translate3d(0, var(--josh-stop-y), 0)
+                  rotate(0deg) scale(0.75);
+              }
+            }
+          </style>
+          <article class="orbit-card orbit-card--left orbit-card--bright">
+            <span>STEP 03</span>
+            <h2>Choose to rise.</h2>
+            <p>
+              Getting back up does not erase the fall. It turns the next step
+              into a brave one—and shows someone else that they can rise, too.
+            </p>
+          </article>
+        </section>
+
+        <section class="space-scene space-scene--reentry">
+          <div
+            class="reentry-message"
+          >
+            <span>THE WAY FORWARD</span>
+            <h2>The greatest superpower is knowing you’re not alone.</h2>
+          </div>
+        </section>
+      </section>
+
+      <section class="earth-landing">
+        <div class="earth-landing__josh" aria-hidden="true">
+          <svg
+      class="astronaut-josh__svg"
+      viewBox="0 0 420 560"
+      role="img"
+      aria-label="Josh flying in his blue superhero outfit and orange cape"
+    >
+      <path
+        class="astronaut-josh__cape"
+        d="M178 279C93 294 47 369 36 490c62-45 123-57 181-38l41-126-80-47Z"
+      />
+      <path
+        class="astronaut-josh__cape-fold"
+        d="M176 306c-54 41-86 92-103 153M198 337c-43 34-69 72-82 113"
+      />
+      <path
+        class="astronaut-josh__leg"
+        d="M188 410c-14 41-22 83-21 126h65l30-117-74-9Z"
+      />
+      <path
+        class="astronaut-josh__leg"
+        d="M255 412c9 42 27 80 52 115l55-37-40-94-67 16Z"
+      />
+      <path
+        class="astronaut-josh__boot"
+        d="M165 514h70v35c-12 8-58 7-73 0l3-35Z"
+      />
+      <path
+        class="astronaut-josh__boot"
+        d="m302 501 54-36 22 31c-5 13-42 38-59 36l-17-31Z"
+      />
+      <path
+        class="astronaut-josh__body"
+        d="M171 270c37-24 102-25 140 2 16 42 21 92 10 149-45 27-103 29-151 3-14-57-14-108 1-154Z"
+      />
+      <path
+        class="astronaut-josh__arm"
+        d="M294 285c38-35 70-75 95-119 17 4 26 13 27 29-18 61-48 110-90 147l-32-57Z"
+      />
+      <path
+        class="astronaut-josh__suit-stripe"
+        d="M340 242c13 9 24 20 31 33M350 226c14 9 25 19 33 31"
+      />
+      <path
+        class="astronaut-josh__hand"
+        d="M383 176c3-24 15-39 34-49 4 17 2 31-7 42 14-8 26-8 36 0-11 22-28 34-50 35l-13-28Z"
+      />
+      <path
+        class="astronaut-josh__arm"
+        d="M179 289c-43 3-83-8-121-34-13 9-18 21-13 35 38 41 83 62 135 61l-1-62Z"
+      />
+      <path
+        class="astronaut-josh__suit-stripe"
+        d="M105 327c5-15 12-29 22-40M87 320c5-16 13-30 23-42"
+      />
+      <path
+        class="astronaut-josh__hand"
+        d="M67 260c-15-16-32-21-50-15 8 14 19 23 32 27-15 0-26 5-33 16 17 16 36 20 57 11l-6-39Z"
+      />
+      <circle class="astronaut-josh__bun" cx="202" cy="78" r="34" />
+      <circle class="astronaut-josh__bun" cx="239" cy="61" r="38" />
+      <circle class="astronaut-josh__bun" cx="279" cy="79" r="34" />
+      <ellipse
+        class="astronaut-josh__face"
+        cx="236"
+        cy="190"
+        rx="78"
+        ry="84"
+      />
+      <circle class="astronaut-josh__ear" cx="161" cy="194" r="15" />
+      <circle class="astronaut-josh__ear" cx="311" cy="194" r="15" />
+      <path
+        class="astronaut-josh__hair"
+        d="M166 169c4-58 32-83 73-83 46 0 76 31 79 84-35-26-76-33-152-1Z"
+      />
+      <path
+        class="astronaut-josh__mask"
+        d="M164 174c49-23 99-22 148 1l-13 47c-39 18-80 18-121-1l-14-47Z"
+      />
+      <ellipse
+        class="astronaut-josh__eye"
+        cx="199"
+        cy="190"
+        rx="9"
+        ry="13"
+      />
+      <ellipse
+        class="astronaut-josh__eye"
+        cx="272"
+        cy="190"
+        rx="9"
+        ry="13"
+      />
+      <path class="astronaut-josh__smile" d="M211 234c17 14 34 14 51 0" />
+      <path
+        class="astronaut-josh__scarf"
+        d="M188 258c30 20 62 21 94 1l16 24c-38 26-82 26-124-1l14-24Z"
+      />
+      <path
+        class="astronaut-josh__scarf-tail"
+        d="M282 275c20 8 35 23 46 45l-35 6-17-39 6-12Z"
+      />
+      <ellipse
+        class="astronaut-josh__badge"
+        cx="245"
+        cy="337"
+        rx="67"
+        ry="43"
+      />
+      <path
+        class="astronaut-josh__badge-path"
+        d="M194 346c31-31 67-35 103-10"
+      />
+      <path
+        class="astronaut-josh__badge-star"
+        d="M257 312c-2 23-6 38-17 43-10 5-20 0-25-9M248 313h20"
+      />
+    </svg>
+          <span>Touchdown</span>
+        </div>
+        <div class="earth-landing__rings" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="earth-landing__copy">
+          <div class="earth-eyebrow">TOUCHDOWN · EASTON, PA</div>
+          <h2>Bring courage back to Earth.</h2>
+          <p>
+            <em>JOSHWAY and the Courage to Rise</em> helps young readers talk
+            about big feelings, trusted support, and the brave choice to keep
+            moving forward. Every book supports JOSHWAY’s work with young people
+            in Easton.
+          </p>
+          <div class="earth-landing__actions">
+            <a
+              class="space-button space-button--navy"
+              href="about-the-book-series/index.html"
+            >
+              Discover the series <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 10h11M11 5l5 5-5 5" />
+    </svg>
+            </a>
+            <a
+              class="space-button space-button--outline"
+              href="#buy-coming-soon"
+            >
+              Buy the book
+            </a>
+          </div>
+        </div>
+        <div class="earth-landing__book">
+          <div class="earth-landing__sun" aria-hidden="true"></div>
+          <img
+            src="../assets/joshway-courage-to-rise-cover.png"
+            alt="JOSHWAY and the Courage to Rise book cover"
+          />
+          <span>
+            ONE STORY
+            <br />A WORLD OF COURAGE
+          </span>
+        </div>
+      </section>
+
+      <section class="earth-pathways" id="support">
+        <div class="earth-pathways__heading">
+          <span>CONTINUE THE MISSION</span>
+          <h2>Help a young person find their way forward.</h2>
+        </div>
+        <div class="earth-pathways__grid">
+          <article>
+            <span>01 · FAMILIES</span>
+            <h3>Start a brave conversation at home.</h3>
+            <a
+              href="#buy-coming-soon"
+            >
+              Get a copy <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 10h11M11 5l5 5-5 5" />
+    </svg>
+            </a>
+          </article>
+          <article>
+            <span>02 · SCHOOLS</span>
+            <h3>Bring the story into your community.</h3>
+            <a href="#reading">
+              Request a reading <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 10h11M11 5l5 5-5 5" />
+    </svg>
+            </a>
+          </article>
+          <article>
+            <span>03 · SUPPORTERS</span>
+            <h3>Put more trusted people in their corner.</h3>
+            <a href="https://joshway.org/donate/">
+              Support the mission <svg aria-hidden="true" viewBox="0 0 20 20">
+      <path d="M4 10h11M11 5l5 5-5 5" />
+    </svg>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+<footer class="footer">
+  <a class="brand brand--footer" href="#top"><img src="../assets/joshway-logo.png" alt="JOSHWAY"></a>
+  <div class="footer__meta"><p>913 Northampton Street · Easton, PA 18042</p><p>Innovation page concept · Content placeholders</p></div>
+  <div class="footer__links"><a href="#contact">Contact</a><a href="#privacy">Privacy</a><a href="https://joshway.org/" target="_blank" rel="noreferrer">joshway.org</a></div>
+</footer>
+</div>
+</body>
+</html>
